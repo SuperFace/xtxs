@@ -1,0 +1,39 @@
+{
+  "name": "xtxs",
+  "version": "1.0.0",
+  "description": "xuetangx 通用cdn上传工具 第三个版本",
+  "main": "index.js",
+  "bin": {
+    "xtzx": "./bin/xtxs"
+  },
+  "dependencies": {
+    "blueimp-md5": "^2.10.0",
+    "chalk": "^2.4.1",
+    "extend": "^3.0.1",
+    "formstream": "^1.1.0",
+    "fs-extra": "^6.0.1",
+    "glob": "^7.1.2",
+    "u-help": "^1.0.1",
+    "urllib": "^2.28.0"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SuperFace/xtxs.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "linxiaolei",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SuperFace/xtxs/issues"
+  },
+  "homepage": "https://github.com/SuperFace/xtxs#readme"
+}
+
