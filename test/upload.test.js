@@ -1,8 +1,8 @@
 const exec = require('child_process').exec
 const assert = require('assert')
 const fs = require('fs-extra')
-const hashOutput = 'http://storage.xuetangx.com/public_assets/xuetangx/xtxs-test/a027704eca42e8e071fa971b8c8f85f5.xtxs-test.js'
-const noHashOutput = 'http://storage.xuetangx.com/public_assets/xuetangx/xtxs-test/xtxs-test.js'
+const hashOutput = 'https://storagecdn.xuetangx.com/public_assets/xuetangx/xtxs-test/c2927638aea072a1da8566db091ddd91.upload.test.js'
+const noHashOutput = ' https://storagecdn.xuetangx.com/public_assets/xuetangx/xtxs-test/upload.test.js'
 
 describe('Upload test', function() {
   describe('Without --no-md5 param', function() {
