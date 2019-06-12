@@ -1,7 +1,7 @@
-xtzx
+xtxs
 =====================
 
-##### xtzx是一套前端开发工具, 其中包含了
+##### xtxs是一套前端开发工具, 其中包含了
 
 * 上传开发环境静态服务器
 * base64 静态图片文件
@@ -17,11 +17,13 @@ xtzx
 
 #### 安装
 
-    npm install xtzx -g
+    npm install xtxs -g
+    本地添加hosts：10.0.0.238 storageupload.xuetangx.com
+    其中 10.0.0.238 是可用的上传服务，可以变，域名storageupload.xuetangx.com不可变
 
 ### 使用
 
-    xtzx {命令名}
+    xtxs {命令名}
 
 
 ### 基本命令
@@ -33,5 +35,5 @@ xtzx
 
 ```bash
 # 新增了 --out 参数，即将输出结果存储到当前目录的output.log文件中。
-xtzx upload <filename|filePath> <uploadDir> [option,'--no-md5'] [option,'--out']
+xtxs upload <filename|filePath> <uploadDir> [option,'--no-md5'] [option,'--out']
 ```

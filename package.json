@@ -1,10 +1,10 @@
 {
   "name": "xtxs",
   "version": "1.0.0",
-  "description": "xuetangx 通用cdn上传工具 第三个版本",
+  "description": "xuetangx 通用工具",
   "main": "index.js",
   "bin": {
-    "xtzx": "./bin/xtxs"
+    "xtxs": "./bin/xtxs"
   },
   "dependencies": {
     "blueimp-md5": "^2.10.0",
@@ -24,16 +24,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SuperFace/xtxs.git"
+    "url": "git+https://github.com/SuperFace/xtxs"
   },
   "keywords": [
     "nodejs"
   ],
-  "author": "linxiaolei",
+  "author": "SuperFace",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/SuperFace/xtxs/issues"
   },
   "homepage": "https://github.com/SuperFace/xtxs#readme"
 }
-

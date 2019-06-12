@@ -10,7 +10,7 @@ module.exports = {
   'user': 'root',
 
     // storage目录
-  'storage': 'http://10.0.0.113/upload/public_assets/xuetangx/',
+  'storage': 'http://storageupload.xuetangx.com/upload/public_assets/xuetangx/', //old: 'http://10.0.0.238/upload/public_assets/xuetangx/',
 
     // 扩展名文件对应storage默认目录
   'defaultStoragePath': {
