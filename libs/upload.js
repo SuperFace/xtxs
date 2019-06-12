@@ -119,20 +119,25 @@ function callback(err, data, res, filePath) {
   if (!err) {
     let time = formatTime(new Date(), 'yyyy-MM-dd HH:mm:ss')
     let resultData = JSON.parse(data.toString())
-    if(resultData.url.indexOf("storage.xuetangx.com") != -1){
-      resultData.url = resultData.url.replace("storage.xuetangx.com", "storagecdn.xuetangx.com");
+    if(("success" in resultData && resultData.success && "url" in resultData && !!resultData.url) || ("url" in resultData && !!resultData.url)){
+      if(resultData.url.indexOf("storage.xuetangx.com") != -1){
+        resultData.url = resultData.url.replace("storage.xuetangx.com", "storagecdn.xuetangx.com");
+      }
+      if(resultData.url.indexOf("http:") != -1){
+        resultData.url = resultData.url.replace("http:", "https:");
+      }
+      let result = '[' + time + '] ' + resultData.url
+  
+      if (!~args.ctrl.indexOf('out')) {
+        console.log(chalk.bgGreen.black(' DONE ') + chalk.green(result + '\n'))
+      } else {
+        outputFile(result, filePath)
+      }
+      //console.log(chalk.bgRed.black(' WARNING ') + chalk.red('请将链接替换为：https://storagecdn.xuetangx.com 开头' + '\n'))
+    }else{
+      if("error" in resultData && !!resultData.error) console.log(chalk.bgRed.black(' ERROR ') + chalk.red(resultData.error))
+      else console.log(chalk.bgRed.black(' ERROR ') + chalk.red(JSON.stringify(resultData)))
     }
-    if(resultData.url.indexOf("http:") != -1){
-      resultData.url = resultData.url.replace("http:", "https:");
-    }
-    let result = '[' + time + '] ' + resultData.url
-
-    if (!~args.ctrl.indexOf('out')) {
-      console.log(chalk.bgGreen.black(' DONE ') + chalk.green(result + '\n'))
-    } else {
-      outputFile(result, filePath)
-    }
-    //console.log(chalk.bgRed.black(' WARNING ') + chalk.red('请将链接替换为：https://storagecdn.xuetangx.com 开头' + '\n'))
 
   } else {
     console.log(chalk.bgRed.black(' ERROR ') + chalk.red('请确认已经连接发布环境vpn, 如果已连接请重试。'))
