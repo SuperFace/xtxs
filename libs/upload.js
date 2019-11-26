@@ -102,7 +102,7 @@ function uploadFile(filePath) {
   let form = formstream()
   form.file('file', filePath)
   urllib.request(config.storage + pathObj.dir + '/' + pathObj.base, {
-    timeout: 60000,
+    timeout: 600000,
     method: 'post',
     headers: form.headers(),
     stream: form

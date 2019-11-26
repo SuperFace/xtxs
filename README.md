@@ -37,3 +37,9 @@ xtxs
 # 新增了 --out 参数，即将输出结果存储到当前目录的output.log文件中。
 xtxs upload <filename|filePath> <uploadDir> [option,'--no-md5'] [option,'--out']
 ```
+# 七牛
+```
+新的bucket，就叫 xtassets  
+绑定域名 static-cdn.xuetangx.com
+需要支持https，开全球加速
+```
